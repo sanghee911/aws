@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /dist/main
+    destination: /home/ec2-user/main
+hooks:
+  ApplicationStart:
+    - location: /home/ec2-user/main
+      timeout: 300
+      runas: root
+
